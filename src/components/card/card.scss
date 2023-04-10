@@ -1,0 +1,41 @@
+.card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid red;
+
+    &>.image {
+        width: 280px;
+        object-fit: cover;
+    }
+
+    &>.card-middle {
+        width: 280px;
+        display: flex;
+        gap: 5px;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    &>.card-body {
+        width: 280px;
+
+        &>.conteiner {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            &>.btn {
+                border: none;
+                background-color: transparent;
+                color: #000;
+                display: flex;
+                font-size: x-large;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.navbar {
+    width: 90%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #8d99ae;
+
+    &>.logo {
+        padding: 5px 15px;
+        text-decoration: none;
+        color: #000000;
+    }
+
+    &>.navigation {
+        display: flex;
+        gap: 50px;
+        padding: 0px 15px;
+
+        &>.link {
+            text-decoration: none;
+            color: #000000;
+        }
+    }
+}
