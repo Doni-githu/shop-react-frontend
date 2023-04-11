@@ -1,0 +1,87 @@
+.modal {
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    border-radius: 15px;
+    padding: 10px;
+    top: 50%;
+    background-color: #161a1d;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &>.top {
+        width: 100%;
+        border-bottom: 1px solid #fdfffc;
+        height: 50px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        padding: 0px 5px;
+        display: flex;
+        justify-content: flex-end;
+        color: #161a1d;
+
+        &>.close {
+            padding: 10px 5px;
+            font-size: 30px;
+            color: #fff;
+        }
+    }
+
+    &>.messages {
+        height: 390px;
+        overflow-y: scroll;
+
+        &>.message {
+            width: 360px;
+            word-break: break-all;
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            word-spacing: 10px;
+
+
+            &>.icon {
+                &>img {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    &>.input {
+        width: 100%;
+
+        &>input {
+            width: 100%;
+            border: 1px solid #161a1d;
+            padding: 5px 10px;
+            color: #fdfffc;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: transparent;
+        }
+        &>input:focus{
+            outline: 2px solid #727272;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 3px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #161a1d;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+}
