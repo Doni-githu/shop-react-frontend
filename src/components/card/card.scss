@@ -1,12 +1,15 @@
 .card {
-    width: 300px;
+    width: 310px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s;
     padding: 10px;
-    border: 1px solid red;
+    background-color: #161a1d;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
 
     &>.image {
         width: 280px;
@@ -32,10 +35,18 @@
             &>.btn {
                 border: none;
                 background-color: transparent;
-                color: #000;
                 display: flex;
                 font-size: x-large;
             }
+
+            &>.btn.like {
+                transition: all 0.3s;
+                color: red !important;
+            }
         }
     }
+}
+
+.card:hover {
+    box-shadow: 15px 15px 15px #fdfffc;
 }
