@@ -32,6 +32,11 @@
 
     &>.messages {
         height: 390px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        align-items: flex-start;
         overflow-y: scroll;
 
         &>.message {
@@ -41,8 +46,9 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            border: 1px solid #727272;
             border-radius: 5px;
-            word-spacing: 10px;
+            word-spacing: 2px;
 
 
             &>.icon {
@@ -67,7 +73,8 @@
             border-bottom-left-radius: 5px;
             background-color: transparent;
         }
-        &>input:focus{
+
+        &>input:focus {
             outline: 2px solid #727272;
         }
     }

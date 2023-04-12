@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { CgComment } from "react-icons/cg"
 import { BsHeart } from "react-icons/bs"
 
 import './card.scss'
 import { useState } from 'react'
+import { context } from '../../context'
 
-export default function Card({ item, changeModal }) {
+export default function Card({ item }) {
     const [like, setLike] = useState(false)
     const [buy, setBuy] = useState(false)
-
+    const { state, dispatch } = useContext(context)
     const buyChangeTrue = () => setBuy(!buy)
 
     const likeChangeTrue = () => {
@@ -20,8 +21,12 @@ export default function Card({ item, changeModal }) {
         item.like -= 1
     }
 
-    const modalChange = (id) => {
-        changeModal(id)
+    const changeModal = (id) => {
+        state.data.forEach((item) => {
+            if (item.id === id) {
+                dispatch({ type: 'MODAL_DATA', payload: item })
+            }
+        })
     }
 
     return (
@@ -35,7 +40,7 @@ export default function Card({ item, changeModal }) {
             </div>
             <div className="card-body">
                 <div className="conteiner">
-                    <button className='btn' onClick={() => modalChange(item.id)}>
+                    <button className='btn' onClick={() => changeModal(item.id)}>
                         <CgComment />
                     </button>
                     <button className={`btn`}>
