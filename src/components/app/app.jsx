@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Main from "../main/main"
 import Navbar from "../navbar/navbar"
+import GlobalChat from "../globalChat/globalChat"
 
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path={"/"} element={<Main />} />
+                <Route path={"/globalChat"} element={<GlobalChat />} />
             </Routes>
         </div>
     )

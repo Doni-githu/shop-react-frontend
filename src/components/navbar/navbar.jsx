@@ -18,8 +18,11 @@ const Navbar = () => {
             </Link>
 
             <nav className="navigation">
-                <Link className="link">
+                <Link to={'/'} className="link">
                     Home
+                </Link>
+                <Link to={'/globalChat'} className="link">
+                    global
                 </Link>
                 <div className="select-handler">
                     <button className="svg" onClick={() => DropDown()}>

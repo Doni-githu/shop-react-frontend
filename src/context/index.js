@@ -299,7 +299,8 @@ const initialValue = {
         },
     ],
     counter: 0,
-    modalData: null
+    modalData: null,
+    chats: []
 }
 
 export const context = createContext()
@@ -317,6 +318,9 @@ const reducer = (state = initialValue, actions) => {
             const { arr, news } = payload
             const newArr = { ...state.modalData, comment: [...arr.comment, news] }
             return { ...state, modalData: newArr }
+        case 'chatAdd':
+            const { chat } = payload
+            return { ...state, chats: [...state.chats, chat] }
         default:
             return state
     }
