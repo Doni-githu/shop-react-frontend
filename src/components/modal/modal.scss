@@ -20,8 +20,15 @@
         border-top-left-radius: 15px;
         padding: 0px 5px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         color: #161a1d;
+        align-items: center;
+
+        &>.title {
+            color: #fdfffc;
+            font-weight: normal;
+            font-size: larger;
+        }
 
         &>.close {
             padding: 10px 5px;

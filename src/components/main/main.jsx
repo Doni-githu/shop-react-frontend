@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import Card from "../card/card"
-import Modal from "../../ui-components/modal/Modal"
+import Modal from "../modal/Modal"
 import './main.scss'
 import { context } from "../../context"
 const Main = () => {

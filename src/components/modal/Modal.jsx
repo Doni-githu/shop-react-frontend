@@ -18,7 +18,7 @@ export default function Modal() {
         user: 1
       }
       dispatch({ type: 'COMMENT_DATA', payload: { arr: state.modalData, news: newMessage } })
-      setMessage("")
+      setMessage('')
     }
   }
 
@@ -26,6 +26,9 @@ export default function Modal() {
   return (
     <div className='modal'>
       <div className="top">
+        <div className='title'>
+          <p>Comments</p>
+        </div>
         <div className='close' onClick={() => dispatch({ type: 'MODAL_DATA', payload: null })}>
           <BsX />
         </div>
